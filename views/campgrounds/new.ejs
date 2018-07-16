@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////// -->
+
+        
+<div class="container">
+	<div class="row">
+		<h1 class="styledh1">Create a new Camp Ground</h1>
+
+		<div class="styledfrm">
+			<form action="/campgrounds" method="POST">
+				<div class="form-group">
+					<input class="form-control" type="text" name="campground[name]" placeholder="Campground Name">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="number" name="campground[price]" placeholder="Price per night" min="99.00" step="10.00">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="campground[image]" placeholder="Image URL">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="campground[description]" placeholder="Add a description of your image!">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-lg btn-primary btn-block">Submit!</button>
+				</div>
+			</form>
+			<a href="/campgrounds">Back</a>
+		</div>
+	</div>
+</div>
+<% include ../partials/footer %>
